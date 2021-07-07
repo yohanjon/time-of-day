@@ -91,22 +91,35 @@
 		let myPic='';
 
 		//Remove the line below for testing
-		//myHours = 10
+		//myHours = 2
 
-		if(myHours < 12){
+		if(myHours >= 5 && myHours < 12){
 			//alert( ‘Good Morning’);
 			myText='Good Morning!';
 			myColor = "yellow";
 			myPic= "images/morning.jpg";
 
-		}else{
+
+		}else if(myHours >= 12 && myHours < 18){
 			//alert(‘Good Afternoon’);
 			myText='Good Afternoon!';
 			myColor= "green";
 			myPic= "images/afternoon.jpg";
+			
+		}else if(myHours >= 18 && myHours < 23){
+			//alert(‘Good Evening’);
+			myText='Good Evening!';
+			myColor= "red";
+			myPic= "images/evening.jpg";
+
+		}else{
+			//alert(‘Good Night’);
+			myText='Good Afternoon!';
+			myColor= "blue";
+			myPic= "images/night.jpg";
 			}
 			
-			console.log(myText);
+			console.log(myHours);
 
 			//load greeting to page
 			document.getElementById('greeting').innerHTML = myText;
